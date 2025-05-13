@@ -1,7 +1,10 @@
 torch
+torchvision 
+torchaudio
 datasets
 ipywidgets
 ffmpeg
+matplotlib
 ffmpeg-python
 plotly
 torchaudio
@@ -12,3 +15,4 @@ streamlit
 moviepy
 streamlit_mic_recorder
 librosa
+addict
