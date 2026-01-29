@@ -2,7 +2,7 @@
 
 ## Summary
 
-This pipeline aims to designe a **pain-specific fine-tuned emotion classification pipeline** to analyse the emotional content of transcripts of chronic pain diaries. In particular we aim to start from audio input and arrive at model that can classify the emotional layer of information carried out in a sentences. In doing this we want to both overcome the limitation of generic emotion classifiers, and build a new classifier that is specific to the experience of chronic pain. We do this adapting (fine-tuning) a pre-trained multi-label emotion model (roberta-base-go_emotions) to capture pain-specific emotional constructs (catastrophizing, helplessness, etc.).
+This pipeline aims to design a **pain-specific fine-tuned emotion classification** model to analyse the emotional content of transcripts of chronic pain diaries. In particular we aim to start from audio input and arrive at a model that can classify the emotional layer of information carried in sentences. In doing this we want to both overcome the limitation of generic emotion classifiers, and build a new classifier that is specific to the experience of chronic pain. We do this by adapting (fine-tuning) a pre-trained multi-label emotion model (roberta-base-go_emotions) to capture pain-specific emotional constructs (catastrophizing, helplessness, etc.).
 
 Audio recordings → Transcripts → Sentence segmentation → Annotation (500(?) sentences) → Fine-tuned classifier → Ready to classify full dataset
 
