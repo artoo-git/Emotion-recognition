@@ -1,12 +1,10 @@
 # Emotion Recognition
 
-please configure Git sync and clear output before committing large Python notebook documents (such as `.ipynb` files), follow these steps:
+Notebooks are automatically stripped of outputs before committing via `nbstripout`. When cloning this repo, run the steps below to enable the same behaviour locally.
 
 ---
 
-### 1. **Install `nbstripout`**
-
-This tool automatically strips output from Jupyter notebooks before committing.
+### 1. Install `nbstripout`
 
 ```bash
 pip install nbstripout
@@ -14,29 +12,27 @@ pip install nbstripout
 
 ---
 
-### 2. **Enable `nbstripout` for Your Git Repo**
+### 2. Enable the Git filter
 
-Navigate to your project folder and run:
+From the project root:
 
 ```bash
 nbstripout --install
 ```
 
-This sets up a Git filter so that output is cleared from notebooks on commit.
+This registers a Git filter that strips outputs from `*.ipynb` files on every commit. The `.gitattributes` file that routes notebooks through this filter is already tracked in the repo.
 
 ---
 
-### 3. **Workflow**
+### 3. Workflow
 
-- Edit and save your notebook as usual.
-- When you commit, outputs will be automatically stripped.
-- The notebook in your Git repo will be clean and lightweight.
+- Edit and save notebooks as usual.
+- On commit, outputs are stripped automatically — no extra steps needed.
+- The committed notebook is clean and lightweight; your local working copy is unaffected.
 
 ---
 
-### 5. **Sync with Remote**
-
-Use standard Git commands terminal:
+### 4. Sync with remote
 
 ```bash
 git add .
@@ -46,9 +42,4 @@ git push
 
 ---
 
-**alternative (discouraged):**  
-You can also clear outputs manually in JupyterLab/VS Code:  
-`Command Palette` → “Notebook: Clear All Outputs” → Save.
-
----
-
+**Alternative (discouraged):** clear outputs manually in JupyterLab/VS Code via `Command Palette` → "Notebook: Clear All Outputs" → Save.
